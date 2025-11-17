@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Concurso de Fotografía Urbana 2025</title>
+   <style>
+      body {
+         font-family: 'Segoe UI', sans-serif;
+         background: #f6f6f6;
+         margin: 0;
+         padding: 0;
+      }
+
+      header {
+         background: #222;
+         color: white;
+         text-align: center;
+         padding: 20px;
+      }
+
+      header img {
+         width: 70px;
+         border-radius: 50%;
+      }
+
+      main {
+         width: 80%;
+         margin: 20px auto;
+         background: white;
+         padding: 20px;
+         border-radius: 10px;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      form {
+         margin-top: 20px;
+      }
+
+      .form-horizontal {
+         display: flex;
+         gap: 20px;
+         /* Espacio entre opciones */
+         flex-wrap: wrap;
+         /* Permite que se vayan a la siguiente línea si no caben */
+         align-items: center;
+         /* Alinea verticalmente los inputs con su label */
+      }
+
+      label {
+         font-weight: bold;
+         display: block;
+         margin-top: 10px;
+      }
+
+      input,
+      select {
+         margin-top: 5px;
+         padding: 8px;
+         width: 98%;
+         border-radius: 5px;
+         border: 1px solid #ccc;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+         width: auto;
+         padding-right: 5px;
+      }
+
+      input[type="submit"] {
+         background: #0078D7;
+         color: white;
+         border: none;
+         cursor: pointer;
+         font-weight: bold;
+         margin-top: 15px;
+      }
+
+      input[type="submit"]:hover {
+         background: #005fa3;
+      }
+
+      mark {
+         background-color: #ffec99;
+         font-weight: bold;
+      }
+
+      figure {
+         text-align: center;
+         margin: 30px 0;
+      }
+
+      figure img {
+         width: 80%;
+         border-radius: 10px;
+         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      }
+
+      figcaption {
+         margin-top: 8px;
+         font-style: italic;
+      }
+
+      details {
+         margin-top: 20px;
+         background: #fafafa;
+         padding: 10px;
+         border: 1px solid #ddd;
+         border-radius: 5px;
+      }
+
+      summary {
+         font-weight: bold;
+         cursor: pointer;
+      }
+
+      footer {
+         background: #222;
+         color: white;
+         text-align: center;
+         padding: 15px;
+         margin-top: 20px;
+      }
+
+      div {
+         margin: 20px;
+         border-radius: 10px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background-color: rgb(218, 241, 255);
+      }
+
+      div img {
+         width: 160px;
+         height: 160px;
+         border-radius: 8px;
+      }
+
+      #descripcion {
+         display: none;
+         flex-direction: column;
+         align-items: start;
+         padding: 10px;
+         background-color: rgb(218, 241, 255);
+         border: 2px, solid, #0078D7;
+      }
+
+      b {
+         padding: 5px;
+      }
+
+      div h3 {
+         padding: 5px;
+         color: #1381a3
+      }
+   </style>
+</head>
+
+<body>
+   <header>
+      <h3>Concurso de Fotografía Urbana 2025</h3>
+      <img src="imagenesE2/logo_camara.jpg" alt="Concurso de Fotografía Urbana 2025">
+   </header>
+
+   <main>
+      <form id="formulario" method="post">
+         <h2>Formulario de Inscripción</h2>
+         <p>Bienvenido al <mark>Concurso de Fotografía Urbana 2025</mark>, un evento donde podrás mostrar tu talento y
+            creatividad capturando la esencia de la ciudad.</p>
+         <label for="email">Correo electrónico:</label>
+         <input id="email" name="email" placeholder="ejemplo@correo.com">
+
+         <label for="hora">Hora preferida para la sesión:</label>
+         <input id="hora" type="time" name="hora">
+
+         <label for="categoria">Categoría:</label>
+         <input type="radio" id="urbana" name="categoria" value="urbana"><b>Fotografía Urbana</b>
+         <input type="radio" id="nocturna" name="categoria" value="nocturna"><b>Fotografía Nocturna</b>
+         <input type="radio" id="retrato" name="categoria" value="retrato"><b>Retrato Urbano</b>
+
+         <label for="foto">Sube tu fotografía:</label>
+         <input type="file" id="foto" name="foto" accept="image/*">
+
+         <div id="previsualizar"></div>
+
+         <label for="preferencias">Preferencias:</label>
+
+         <input type="checkbox" id="bases" name="PR1" value="Sí"><b>Acepto las bases del concurso</b>
+         <input type="checkbox" id="noticias" name="PR2" value="Sí"><b>Deseo recibir noticias sobre próximos eventos</b>
+
+         <input id="boton" type="submit" value="Enviar Inscripción">
+      </form>
+
+      <div id="descripcion">
+         <h3>Resumen de tu inscripción:</h3>
+         <p><b>Correo:</b><span id="valorEmail"></span></p>
+         <p><b>Hora de sesión:</b><span id="valorHora"></span></p>
+         <p><b>Categoría:</b><span id="valorCategoria"></span></p>
+         <p><b>Bases aceptadas:</b><span id="valorBases"></span></p>
+         <p><b>Recibir noticias:</b><span id="valorNoticias"></span></p>
+         <p><b>Archivo seleccionado:</b><span id="valorFichero"></span></p>
+      </div>
+
+
+      <figure>
+         <img src="imagenesE2/foto_urbana.jpg" style="max-width: 600px;">
+         <figcaption>Fotografía urbana de una ciudad 📸</figcaption>
+      </figure>
+
+      <details>
+         <summary>¿Puedo enviar más de una fotografía?</summary>
+         <p>Sí, cada participante puede enviar tres fotografías diferentes, pero debe completar un formulario por cada
+            una.</p>
+      </details>
+
+      <details>
+         <summary>¿Cuál es el premio?</summary>
+         <p>Un viaje gratis al lugar a donde tu desees viajar por todo el mundo.</p>
+      </details>
+
+   </main>
+
+   <footer>
+      <p>&copy; Concurso Fotografía Urbana - Diseñado por estudiantes de Diseño Web</p>
+   </footer>
+
+   <script>
+
+      // --------------- INPUT FILE ---------------
+      const inputFile = document.getElementById('foto');
+      const previsualizar = document.getElementById('previsualizar');
+      let imagenMostrada = null;
+
+
+      // --------------- FORMULARIO ---------------
+      const formulario = document.getElementById('formulario');
+      let nombreFichero;
+      let eliminarArchivo;
+
+      // --------------- DESCRIPCION DEL FORMULARIO ---------------
+      let valorEmail = document.getElementById('valorEmail');
+      let valorHora = document.getElementById('valorHora');
+      let valorCategoria = document.getElementById('valorCategoria');
+      let valorBases = document.getElementById('valorBases');
+      let valorNoticias = document.getElementById('valorNoticias');
+      let fichero = document.getElementById('valorFichero');
+      let descripcion = document.getElementById('descripcion');
+
+      // --------------- MÉTODO PREVISUALIZAR IMAGEN ---------------
+      inputFile.addEventListener('change', function () {
+         const archivo = inputFile.files[0]; // Primer archivo seleccionado
+
+         if (archivo) {
+            if (!imagenMostrada) {
+               imagenMostrada = document.createElement('img');
+               imagenMostrada.classList.add('imagenPrev');
+               previsualizar.appendChild(imagenMostrada);
+               previsualizar.style.height = '180px';
+               previsualizar.style.width = '180px';
+            }
+
+            const reader = new FileReader();
+            reader.onload = (ev) => {
+               imagenMostrada.src = ev.target.result;
+            }
+            reader.readAsDataURL(archivo);
+            nombreFichero = archivo.name;
+            //eliminarArchivo = archivo;
+
+            previsualizar.style.display = 'flex'
+            // console.log('Nombre:', archivo.name);
+         } else {
+            alert('No se seleccionó ningún archivo');
+         }
+      });
+
+
+      // --------------- MÉTODO COMPROBAR INPUTS ---------------
+      formulario.addEventListener('submit', (ev) => {
+         ev.preventDefault();
+
+         let correo = document.getElementById('email').value.trim();
+         let hora = document.getElementById('hora').value.trim();
+         let categoria = document.querySelector('input[name="categoria"]:checked');
+         let basesConcurso = document.getElementById('bases');
+         let noticias = document.getElementById('noticias');
+
+         if (!correo || !hora || !categoria || !nombreFichero) {
+            alert('Debes rellenar todos los campos del formulario');
+            return;
+         }
+
+
+         valorEmail.innerHTML = correo;
+         valorHora.innerHTML = hora;
+         valorCategoria.innerHTML = categoria.value;
+         valorNoticias.innerHTML = noticias.checked ? noticias.value : 'No';
+         valorBases.innerHTML = basesConcurso.checked ? basesConcurso.value : 'No';
+         fichero.innerHTML = nombreFichero;
+
+         // console.log("Correo: " + correo);
+         // console.log("hora: " + hora);
+         // console.log("categoria: " + categoria);
+         // console.log("imagen: " + nombreFichero);
+
+         descripcion.style.display = 'flex';
+         alert('La inscripción ha sido completada con éxito');
+         ev.preventDefault();
+
+         setTimeout(() => {
+            formulario.reset();
+            previsualizar.style.display = 'none';
+
+            if (imagenMostrada) {
+               imagenMostrada.remove();
+               imagenMostrada = null;
+            }
+         }, 5000);
+
+
+      })
+   </script>
+</body>
+
+</html>

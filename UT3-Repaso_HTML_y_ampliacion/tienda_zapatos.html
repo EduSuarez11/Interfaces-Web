@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Zapatillas Urbanas</title>
+  <style>
+    /* ======== ESTILOS GENERALES ======== */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #111;
+    }
+
+    a {
+      color: #0078D7;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ======== HEADER ======== */
+    header {
+      background: #111;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header img {
+      width: 70px;
+      border-radius: 50%;
+    }
+
+    /* ======== NAV ======== */
+    nav {
+      background: #222;
+      text-align: center;
+      ;
+      padding: 10px 0;
+      width: 100%;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #FFD700;
+    }
+
+    /* ======== MAIN ======== */
+    main {
+      display: flex;
+      margin: 20px;
+    }
+
+    section {
+      display: flex;
+      flex: 3;
+      padding: 10px;
+      flex-direction: column;
+    }
+
+    article {
+      background: white;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    aside {
+      flex: 1;
+      background: #fafafa;
+      padding: 15px;
+      margin-left: 20px;
+      border-left: 2px solid #ddd;
+      border-radius: 8px;
+    }
+
+    /* ======== TABLA ======== */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      background: white;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #333;
+      color: white;
+    }
+
+    /* ======== GALERÍA ======== */
+    #galeriaZapatos {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 20px;
+      flex-wrap: wrap;
+    }
+
+    #galeriaZapatos figure {
+      width: 250px;
+    }
+
+
+    /* ======== FORMULARIO ======== */
+    form {
+      background: white;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 500px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 96%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+
+    input[type="submit"] {
+      background: #0078D7;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 15px;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    input[type="submit"]:hover {
+      background: #005ea0;
+    }
+
+  
+    /* ======== IFRAME ======== */
+    iframe {
+      display: block;
+      margin: 30px auto;
+      border: none;
+      border-radius: 10px;
+    }
+
+    /* ======== FOOTER ======== */
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: #FFD700;
+    }
+
+    /* ======== CSS ADICIONAL ======== */
+    p>a {
+      color: yellow;
+    }
+
+    button {
+      width: 100px;
+      height: 30px;
+      font-size: 15px;
+      background-color: darkred;
+      color: #ddd;
+      border-color: white;
+      border-radius: 3px;
+      background-attachment: fixed;
+      cursor: pointer;
+    }
+
+    figcaption {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .imagenesGaleria {
+      max-width: 100%;
+    }
+
+    figure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: 700px) {
+      aside {
+        display: none;
+      }
+    }
+
+  </style>
+</head>
+
+
+
+<body id="inicio">
+  <!-- =========== HEADER =========== -->
+  <header>
+    <img src="/imagenesE1/Logo_tienda.png" alt="Zapatillas Urbanas">
+    <h1>Zapatillas Urbanas</h1>
+  </header>
+
+
+  <!-- =========== BARRA DE NAVEGACIÓN =========== -->
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#noticias">Noticias</a>
+    <a href="#modelos">Modelos</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <main>
+    <!-- =========== SECCIÓN PRINCIPAL =========== -->
+    <section>
+      <h2 id="noticias">Últimas Noticias</h2>
+      <article>
+        <div>
+          <h4>Nike lanza su nueva línea sostenible</h4>
+          <img src="imagenesE1/Zapatilla_Nike_VOMERO_18_SE.png" alt="Nike_Vomero" style="max-width: 300px;"
+            title="Nike Vomero 18 SE">
+          <p>La nueva colección de Nike utiliza reciclados y procesos ecológicos para reducir su huella ambiental</p>
+          <a href="">Leer mas...</a>
+        </div>
+      </article>
+
+      <article>
+        <h2>Adidas presenta las ZX Neon</h2>
+        <img src="imagenesE1/Zapatilla_ZX_700_HD_Gris.avif" alt="ZX_700_HD_Gris" style="max-width: 300px;"
+          title="Adidas ZX">
+        <p>El futuro se construye con las lecciones aprendidas en el pasado. Inspirada en esa idea, esta zapatilla
+          adidas ZX 700 HD recupera el estilo del running de los 80.</p>
+        </div>
+      </article>
+
+    <!-- =========== TABLA DE MODELOS =========== -->
+      <article id="modelos">
+        <h2>Comparativa de modelos</h2>
+        <table>
+          <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Precio(€)</th>
+            <th>Disponibilidad</th>
+          </tr>
+
+          <tr>
+            <td>Nike</td>
+            <td>Air Zoom</td>
+            <td>120</td>
+            <td>En stock</td>
+          </tr>
+
+          <tr>
+            <td>Adidas</td>
+            <td>ZX Neon</td>
+            <td>110</td>
+            <td>Agotado</td>
+          </tr>
+
+          <tr>
+            <td>Puma</td>
+            <td>RS-X</td>
+            <td>99</td>
+            <td>En stock</td>
+          </tr>
+
+        </table>
+      </article>
+    </section>
+
+  <!-- =========== BARRA LATERAL =========== -->
+    <aside>
+      <h2>Enlaces de interés</h2>
+      <ul>
+        <li><a href="https://www.nike.com" title="nike.com">Nike Oficial</a></li>
+        <li><a href="https://www.adidas.es" title="adidas.es">Adidas España</a></li>
+        <li><a href="https://www.puma.com" title="puma.com">Puma</a></li>
+      </ul>
+
+      <h2>Promoción</h2>
+      <img src="imagenesE1/zapatos_negros.avif" style="width: 300px;">
+    </aside>
+  </main>
+
+  <!-- =========== SECCIÓN GALERÍA =========== -->
+  <section>
+    <article id="galeria">
+      <h2>Galeria</h2>
+      <button id="boton">Ocultar</button>
+      <div id="galeriaZapatos">
+        <figure>
+          <img class="imagenesGaleria" src="imagenesE1/Zapatilla_Handball_Spezial_Azul.avif" alt="Handball_Spezial_azul"
+            title="Adidas Handball Spezial">
+          <figcaption>Adidas Handball Spezial Azul</figcaption>
+        </figure>
+
+        <figure>
+          <img class="imagenesGaleria" src="imagenesE1/Zapatilla_AIR_JORDAN_1_LOW.png" alt="Nike_Air_Jordan_Low" title="Nike Air Jordan Low">
+          <figcaption>Nike Air Jordan Low</figcaption>
+        </figure>
+
+        <figure>
+          <img class="imagenesGaleria" src="imagenesE1/Zapatilla_Adi2000_Negro.avif" alt="Adi2000_Negro" title="Adidas Adi2000 Negro">
+          <figcaption>Adidas Adi2000 Negro</figcaption>
+        </figure>
+
+        <figure>
+          <img class="imagenesGaleria" src="imagenesE1/Zapatillas_Speedcat_OG_unisex.png" alt="Speedcat_OG_unisex"
+            title="Zapatilla_Adi2000_Negro">
+          <figcaption>Puma Speedcat OG unisex</figcaption>
+        </figure>
+      </div>
+    </article>
+  </section>
+
+
+  <!-- =========== IFRAME CON VIDEO =========== -->
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/O-JXUhhIRHU?si=6jqjHCYTMj1De4dF"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+  </iframe>
+
+
+  <!-- =========== FORMULARIO =========== -->
+  <form id="contacto">
+    <h3>CONTACTO</h3>
+    <label for="nombre">Nombre</label>
+    <input id="nombre" type="text">
+    <div id="mensaje"></div>
+
+    <label for="email">Correo electrónico</label>
+    <input id="email" type="email">
+
+    <label for="tipo">Tipo de zapatilla favorita</label>
+    <select id="tipo">
+      <option value="">-- Elige tu zapatilla favorita --</option>
+      <option value="1">Nike Air Force</option>
+      <option value="2">Puma</option>
+      <option value="3">Adidas ZX</option>
+      <option value="4">Adidas Samba</option>
+    </select>
+
+    <label for="comentarios">Comentarios</label>
+    <textarea rows="5" cols="5" maxlength="200"></textarea>
+
+    <input type="submit">
+  </form>
+
+
+  <!-- =========== FOOTER =========== -->
+  <footer>
+    <p>&copy; 2025 Zapatillas Urbanas - Todos los derechos reservados.</p>
+    <p>Siguenos en
+      <a href="https://www.instagram.com" title="instagram.com" class="rrssFooter">Instagram</a> |
+      <a href="https://www.facebook.es" title="facebook.es" class="rrssFooter">Facebook</a> |
+      <a href="https://www.x.com" title="x.com" class="rrssFooter">Twitter</a> |
+      al inicio
+    </p>
+  </footer>
+
+
+  <script>
+
+    // VARIABLES
+    const formulario = document.getElementById("contacto");
+    let boton = document.getElementById("boton");
+    let galeria = document.getElementById("galeriaZapatos");
+
+
+    // MENSAJE DE BIENVENIDA    
+    window.onload = () => {
+       alert('¡Bienvenido a Zapatillas Urbanas!');
+    }
+
+
+    // VALIDACIONES DEL FORMULARIO
+    formulario.addEventListener("submit", (ev) => {
+      const nombre = document.getElementById("nombre");
+      const email = document.getElementById("email");
+      const eleccion = document.getElementById("tipo");
+
+      if (nombre.value == "" || email.value == "" || eleccion.value == "") {
+        alert(`Debes rellenar los campos nombre, email y tipo`);
+        ev.preventDefault();
+        return;
+      }
+      alert('DATOS ENVIADOS CORRECTAMENTE');
+    });
+
+    // MOSTRAR/OCULTAR GALERÍA DE ZAPATOS
+    boton.addEventListener("click", (ev) => {
+      if (boton.innerHTML == "Ocultar") {
+        boton.innerHTML = "Mostrar";
+        galeria.style.display = 'none';
+        boton.style.backgroundColor = 'darkgreen';
+      } else {
+        boton.innerHTML = "Ocultar";
+        galeria.style.display = 'flex';
+        boton.style.backgroundColor = 'darkred';
+      }
+    });
+
+    boton.onmouseover = () => {
+      if (boton.innerHTML == "Mostrar") {
+        boton.style.backgroundColor = "rgb(0, 48, 0)"
+      } else {
+        boton.style.backgroundColor = "rgb(74, 0, 0)";
+      }
+    }
+
+    boton.onmouseout = () => {
+      if (boton.innerHTML == "Mostrar") {
+        boton.style.backgroundColor = "darkgreen"
+      } else {
+        boton.style.backgroundColor = "darkred"
+      }
+    }
+
+  </script>
+</body>
+
+</html>
