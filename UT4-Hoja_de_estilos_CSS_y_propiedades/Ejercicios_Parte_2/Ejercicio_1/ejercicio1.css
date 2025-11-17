@@ -1,0 +1,63 @@
+body {
+    background-color: rgb(240 243 250);
+    font-family: 'Calibri';
+    padding: 25px;
+}
+
+
+/*---------------- DIV PRINCIPAL ----------------*/
+.contenido {
+    margin: 25px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/*---------------- DIV CAJAS ----------------*/
+.box {
+    background-color: white;
+    padding: 5px 5px 15px 5px;
+    width: 180px;
+    text-align: center;
+}
+
+
+.box:hover, .bigBox:hover {
+    transform: scale(1.05);
+}
+
+
+.bigBox {
+    background-color: white;
+    width: 200px;
+    text-align: center;
+    transform: scale(1.15);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+/*---------------- IMÁGENES ----------------*/
+img {
+    width: 100px;
+    padding: 15px;
+    border-radius: 200px;
+}
+
+/*---------------- TEXTO ----------------*/
+h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+p {
+    font-size: 14px;
+}
+
+
+@media (max-width: 800px) {
+    .contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4.2em;
+    }
+}

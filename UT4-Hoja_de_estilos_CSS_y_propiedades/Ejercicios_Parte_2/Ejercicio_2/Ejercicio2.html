@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ejercicio 2</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='ejercicio2.css'>
+</head>
+
+<body>
+    <!-- =============== NAV ===============-->
+    <nav>
+        <span>MiLogo</span>
+        <div>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <div class="menu-toggle" id="menuToggle">☰</div>
+        <button type="button">Ingresar</button>
+    </nav>
+
+    <!-- =============== MAIN ===============-->
+    <main>
+        <h2>Bienvenido a la Página</h2>
+        <p>Desplazate para ver el efecto en la barra de navegación y prueba el menú en pantallas pequeñas.</p>
+    </main>
+
+    <!-- =============== JS ===============-->
+    <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+
+</html>
