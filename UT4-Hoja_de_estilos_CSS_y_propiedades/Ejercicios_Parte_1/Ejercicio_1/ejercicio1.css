@@ -1,0 +1,27 @@
+body {
+    font-family: 'Calibri';
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    background-color:lightgray;
+    width: 100%;
+}
+
+.item {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    width: 50px;
+    margin: 20px;
+    padding: 15px 10px 15px 10px;
+    border-radius: 3px;
+}
+
+
+/* Efecto hover opcional */
+.item:hover {
+ transform: scale(1.1);
+ background: #7b68ee;
+}

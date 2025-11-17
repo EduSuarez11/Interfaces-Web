@@ -1,0 +1,19 @@
+body {
+    font-family: 'Calibri';
+}
+
+.container {
+    background-color: lightyellow;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.caja {
+    background-color: lightsalmon;
+    color: white;
+    border: 3px solid darkred;
+    border-radius: 5px;
+    margin: 75px;
+    padding: 10px 20px 10px 20px;
+}

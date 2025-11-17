@@ -1,0 +1,26 @@
+body {
+    font-family: 'Calibri';
+}
+
+.container {
+    background-color: azure;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 200px;
+    gap: 10px;
+}
+
+
+.item {
+    background-color: #7b68ee;
+    width: 50px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+div .item {
+    text-align: center;
+    color: white;
+}

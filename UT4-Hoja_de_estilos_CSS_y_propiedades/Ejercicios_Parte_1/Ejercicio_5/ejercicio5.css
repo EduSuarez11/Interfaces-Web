@@ -1,0 +1,22 @@
+body {
+    font-family: 'Calibri';
+}
+
+.container {
+    background-color: lightgreen;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.caja {
+    background-color: rgb(50, 106, 50);
+    color: white;
+    flex-basis: 40%;
+    text-align: center;    
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
